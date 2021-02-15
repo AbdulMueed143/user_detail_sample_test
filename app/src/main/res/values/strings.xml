@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">UserDetailSampleTest</string>
+    <string name="user_information">User Information</string>
 </resources>
