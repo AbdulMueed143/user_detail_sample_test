@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="user"
+            type="au.com.userdetailsampletest.models.entitymodels.User" />
+
+        <variable
+            name="userListViewModel"
+            type="au.com.userdetailsampletest.models.viewmodels.UserListViewModel" />
+
+    </data>
+
+    <LinearLayout
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:onClick="@{() -> userListViewModel.openAlbum(user.id)}"
+        android:orientation="vertical"
+        android:padding="@dimen/dim_8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/id"
+                android:padding="@dimen/dim_4dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:padding="@dimen/dim_4dp"
+                android:text="@{user.idAsString}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:padding="@dimen/dim_4dp"
+                android:textStyle="bold"
+                android:text="@string/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:padding="@dimen/dim_4dp"
+                android:text="@{user.name}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:padding="@dimen/dim_4dp"
+                android:textStyle="bold"
+                android:text="@string/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:padding="@dimen/dim_4dp"
+                android:text="@{user.email}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:padding="@dimen/dim_4dp"
+                android:textStyle="bold"
+                android:text="@string/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:padding="@dimen/dim_4dp"
+                android:text="@{user.phone}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

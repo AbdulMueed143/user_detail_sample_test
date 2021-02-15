@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        
+        <import type="android.view.View" />
+
+        <import type="androidx.core.content.ContextCompat" />
+        
+        <variable
+            name="usersListViewModel"
+            type="au.com.userdetailsampletest.models.viewmodels.UserListViewModel" />
+
+    </data>
+
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="@color/white"
+        android:padding="@dimen/dim_8dp"
+        android:id="@+id/rcyUsers"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:items="@{usersListViewModel.users}"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</layout>

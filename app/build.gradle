@@ -103,6 +103,8 @@ dependencies {
 
     //Lifecycle
     implementation "android.arch.lifecycle:extensions:2.1.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.3.0"
     kapt "android.arch.lifecycle:compiler:2.1.0"
 
 

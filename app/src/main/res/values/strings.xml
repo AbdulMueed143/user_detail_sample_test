@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">UserDetailSampleTest</string>
     <string name="user_information">User Information</string>
+    <string name="id">ID: </string>
+    <string name="name">Name: </string>
+    <string name="email">Email: </string>
+    <string name="phone">Phone: </string>
 </resources>
