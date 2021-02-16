@@ -2,8 +2,6 @@ package au.com.userdetailsampletest.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import au.com.userdetailsampletest.databinding.UserItemBinding
 import au.com.userdetailsampletest.models.entitymodels.User
@@ -21,8 +19,8 @@ class UsersAdapter(private val viewModel: UserListViewModel) : RecyclerView.Adap
 
         companion object {
             fun from(parent: ViewGroup): ViewHolder {
-                val layoutInflater = LayoutInflater.from(parent.context)
-                val binding = UserItemBinding.inflate(layoutInflater, parent, false)
+                val inflater = LayoutInflater.from(parent.context)
+                val binding = UserItemBinding.inflate(inflater, parent, false)
                 return ViewHolder(binding)
             }
         }

@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import au.com.userdetailsampletest.database.dao.AlbumDao
 import au.com.userdetailsampletest.database.dao.UserDao
 import au.com.userdetailsampletest.models.entitymodels.Album
 import au.com.userdetailsampletest.models.entitymodels.User
@@ -13,6 +14,7 @@ import au.com.userdetailsampletest.util.Constants
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun userDao() : UserDao
+    abstract fun albumDao() : AlbumDao
 
     companion object {
 

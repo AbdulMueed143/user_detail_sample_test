@@ -1,10 +1,8 @@
 package au.com.userdetailsampletest.database.repositories
 
-import androidx.lifecycle.LiveData
 import au.com.userdetailsampletest.database.dao.UserDao
 import au.com.userdetailsampletest.datasources.remote.UserRemoteDataSource
-import au.com.userdetailsampletest.models.entitymodels.User
-import au.com.userdetailsampletest.utils.performGetOperation
+import au.com.userdetailsampletest.util.performGetOperation
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
@@ -32,7 +30,4 @@ class UserRepository @Inject constructor(
             localDataSource.insertAll(it).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe()
         }
     )
-
-
-
 }

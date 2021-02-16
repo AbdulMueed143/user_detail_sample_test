@@ -3,7 +3,6 @@ package au.com.userdetailsampletest.di.modules
 import androidx.lifecycle.ViewModel
 import au.com.userdetailsampletest.di.annotations.ViewModelKey
 import au.com.userdetailsampletest.models.viewmodels.AlbumListViewModel
-import au.com.userdetailsampletest.models.viewmodels.UserItemViewModel
 import au.com.userdetailsampletest.models.viewmodels.UserListViewModel
 import au.com.userdetailsampletest.models.viewmodels.ViewImageViewModel
 import dagger.Binds
@@ -27,10 +26,5 @@ abstract class ViewModelBuilderModule {
     @IntoMap
     @ViewModelKey(ViewImageViewModel::class)
     abstract fun bindViewImageViewModel(viewImageViewModel: ViewImageViewModel) : ViewModel
-
-    @Binds
-    @IntoMap
-    @ViewModelKey(UserItemViewModel::class)
-    abstract fun bindUserItemViewModel(userItemViewModel: UserItemViewModel) : ViewModel
 
 }

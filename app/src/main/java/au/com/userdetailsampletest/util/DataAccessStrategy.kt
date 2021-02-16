@@ -1,9 +1,8 @@
-package au.com.userdetailsampletest.utils
+package au.com.userdetailsampletest.util
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import androidx.lifecycle.map
-import au.com.userdetailsampletest.util.Resource
 import kotlinx.coroutines.Dispatchers
 
 fun <T, A> performGetOperation(databaseQuery: () -> LiveData<T>,
@@ -16,6 +15,7 @@ fun <T, A> performGetOperation(databaseQuery: () -> LiveData<T>,
         }
         emitSource(source)
 
+        //Current logic is to try for getting new data everytime but we can easily modify this as per requirements
         val responseStatus = networkCall.invoke()
         if (responseStatus.status == Resource.Status.SUCCESS) {
             saveCallResult(responseStatus.data!!)

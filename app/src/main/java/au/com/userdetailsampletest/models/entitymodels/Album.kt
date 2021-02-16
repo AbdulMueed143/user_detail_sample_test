@@ -17,11 +17,11 @@ import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = Album.TABLE_NAME)
 data class Album(
-    @PrimaryKey
     @ColumnInfo(name = COL_ALBUM_ID)
     @SerializedName(COL_ALBUM_ID)
     val albumId : Int,
-
+    
+    @PrimaryKey
     @ColumnInfo(name = COL_ID)
     @SerializedName(COL_ID)
     val id : Int,

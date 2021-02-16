@@ -10,7 +10,7 @@ interface UserInformationService {
     @GET("users")
     suspend fun getAllUsers() : Response<List<User>>
 
-    @GET
+    @GET("photos")
     suspend fun getAlbums() : Response<List<Album>>
 
 }

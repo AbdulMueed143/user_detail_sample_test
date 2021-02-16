@@ -1,6 +1,7 @@
 package au.com.userdetailsampletest.di.modules
 
 import android.app.Application
+import au.com.userdetailsampletest.datasources.remote.AlbumRemoteDataSource
 import au.com.userdetailsampletest.network.UserInformationService
 import au.com.userdetailsampletest.datasources.remote.UserRemoteDataSource
 import au.com.userdetailsampletest.util.Constants
@@ -41,5 +42,8 @@ class ApplicationBuilderModule {
     @Provides
     fun providesUserRemoteDataSource(userInformationService: UserInformationService) = UserRemoteDataSource(userInformationService)
 
+    @Singleton
+    @Provides
+    fun providesAlbumRemoteDataSource(userInformationService: UserInformationService) = AlbumRemoteDataSource(userInformationService)
 
 }
