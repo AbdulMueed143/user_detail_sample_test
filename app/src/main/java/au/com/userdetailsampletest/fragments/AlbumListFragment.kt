@@ -22,6 +22,15 @@ import dagger.android.support.DaggerFragment
 import kotlinx.android.synthetic.main.bottom_sheet_image_view.*
 import javax.inject.Inject
 
+/**
+ *
+ * As per current logic we are loading images everytime.
+ *
+ * Technically, we can even directly filter results from API but to avoid everything that is time consuming
+ * I have added all results into db and Querying db to give us specific user data when album fragment is instantiated
+ *
+ * */
+
 class AlbumListFragment : DaggerFragment() {
 
     @Inject lateinit var viewModelProviderFactory : ViewModelProviderFactory

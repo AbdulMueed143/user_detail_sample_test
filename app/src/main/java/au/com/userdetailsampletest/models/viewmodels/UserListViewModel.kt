@@ -11,7 +11,7 @@ import javax.inject.Inject
 
 class UserListViewModel @Inject constructor(userRepository: UserRepository)  : ViewModel() {
 
-    val _users : LiveData<Resource<List<User>>>  = userRepository.getAllUsers()
+    val _users : LiveData<Resource<List<User>>> = userRepository.getAllUsers()
     var users : List<User>? = null
 
     private val _openAlbumEvent = MutableLiveData<Event<Int>>()

@@ -4,7 +4,7 @@ import au.com.userdetailsampletest.di.component.DaggerApplicationComponent
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication
 
-class BaseApp : DaggerApplication() {
+open class BaseApp : DaggerApplication() {
 
     override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
         //Changing to dagger appplication

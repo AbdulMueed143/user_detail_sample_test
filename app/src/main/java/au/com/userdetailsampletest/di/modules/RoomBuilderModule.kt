@@ -8,10 +8,8 @@ import au.com.userdetailsampletest.database.repositories.AlbumRepository
 import au.com.userdetailsampletest.database.repositories.UserRepository
 import au.com.userdetailsampletest.datasources.remote.AlbumRemoteDataSource
 import au.com.userdetailsampletest.datasources.remote.UserRemoteDataSource
-import au.com.userdetailsampletest.network.UserInformationService
 import dagger.Module
 import dagger.Provides
-import retrofit2.Retrofit
 import javax.inject.Singleton
 
 @Module
